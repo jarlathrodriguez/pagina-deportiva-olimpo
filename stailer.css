@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+header {
+    background-image: linear-gradient(to top, rgb(48, 207, 208,0.5) 0%, rgb(51, 8, 103,0.5) 100%),url(img/hero.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/**/
+
+.neon-txt{
+    text-transform: uppercase;
+    font-size: 5rem;
+    cursor: pointer; 
+    /*Contorno de texto con color */
+    color: transparent;
+    -webkit-text-stroke:3px rgb(0, 0, 0,0.0);
+    background-image: linear-gradient(to left, rgb(0, 255, 200),rgb(255, 0, 162),
+    rgb(51, 8, 103),rgb(250, 250, 250));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: move 30s linear infinite;
+    transition-duration: 2s;
+}
+@keyframes move{
+    0% {
+        background-position: 100%;
+    }
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.neon-txt:hover{
+    transition: all 2s ease;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(109, 0, 156),
+                 0 0 20px rgb(109, 0, 156),
+                 0 0 40px rgb(109, 0, 156),
+                 0 0 80px rgb(109, 0, 156);
+}
+/**/
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.menu .logo {
+    font-weight: 700;
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 0 0 10px rgb(109, 0, 156),
+                 0 0 20px rgb(109, 0, 156),
+                 0 0 40px rgb(109, 0, 156),
+                 0 0 80px rgb(109, 0, 156);
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    transition: all 0.5s ease;
+    color: #00ffc8;
+    text-shadow: 0 0 10px rgb(0, 255, 255),
+                 0 0 20px rgb(0, 255, 255),
+                 0 0 40px rgb(0, 255, 255),
+                 0 0 80px rgb(0, 255, 255);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+.header-content {
+    display: flex;
+}
+
+.content {
+    padding: 150px 150px 0px 0px ;
+}
+
+.content h1 {
+    /*color: #fff;*/
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 55px;   
+}
+
+.content p {
+    margin-top: 25px;
+    color: #aab1ff;
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.btn-1 {
+    display: inline-block;
+    background-color: rgb(170, 177, 255, 0.3);
+    border: 1px solid #f5f5f5;
+    margin: 35px 10px 0px 0px;
+    padding: 15px 25px;
+    color: #fff;
+    border-radius: 17px;
+    transition-duration: 1s;
+}
+
+.btn-1:hover {
+    border-radius: 25px;
+    border: none;
+    transition: all 0.5s ease;
+    background: linear-gradient(45deg, rgb(106, 17, 203), rgb(69, 255, 255), rgb(225, 225, 225));
+    box-shadow: 0 0 10px rgb(69, 255, 255),
+                0 0 20px rgb(69, 255, 255),
+                0 0 40px rgb(69, 255, 255);
+}
+
+/*servicios*/
+
+.services {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service {
+    padding: 25px;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 20px rgba(135, 141, 214, 0.5);
+}
+
+.service img {
+    margin-top: -50px;
+}
+
+.service h3 {
+    font-size: 20px;
+    color: #0e0e0e;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #525254;
+    font-size: 16px;
+}
+
+/*Portafolio*/
+
+.portafolio {
+    padding: 80px 0px;
+    text-align: center;
+    color: #0e0e0e;
+}
+
+.portafolio h2 {
+    font-size: 55px;
+}
+
+.porfolio {
+    display: flex;
+    align-items: center;
+}
+
+.porfolio img {
+    width: 350px;
+}
+
+.porfolio-1{
+    text-align: left;
+    margin-left: 100px;
+}
+
+.porfolio-1 h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.porfolio-1 p {
+    font-size: 18px;
+    color: #525254;
+    margin-bottom: 25px;
+}
+
+.porfolio-2 {
+    text-align: left;
+    margin-right:100px;
+
+}
+
+.porfolio-2 h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.porfolio-2 p {
+    font-size: 18px;
+    color: #525254;
+    margin-bottom: 25px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 17px;
+    background-color: rgb(106, 17, 203);
+    color: #fff;
+    transition-duration: 1s;
+}
+
+.btn-2:hover {
+    border-radius: 25px;
+    transition: all 0.5s ease;
+    background:linear-gradient(45deg, rgb(255, 0, 162), rgb(111, 0, 255), rgb(225, 225, 225));
+    box-shadow: 0 0 10px rgb(51, 8, 103),
+                0 0 20px rgb(255, 0, 162),
+                0 0 40px rgb(255, 0, 162);
+}
+
+/*Footer*/
+
+footer {
+    padding: 200px 0px 30px 0px;
+    background-image: linear-gradient(to right, rgb(0, 219, 222, 0.5) 0%, rgb(252, 0, 255, 0.5) 100%), url(img/footer.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info-content {
+    /*display: flex;*/
+    width: 100%;
+    margin: auto;
+}
+
+.info-price {
+    padding: 35px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 25px rgb(0, 0, 0,0.5);
+    color: #000000;
+    
+}
+
+.info-price h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.price {
+    font-size: 14px;
+    color: rgb(0, 17, 255) !important;
+    margin-bottom: 10px;
+}
+
+.info-price p{
+   font-size: 16px;
+   color: #525254;
+}
+/*Galeria de imagenes*/
+.galeria {
+    text-align: center;
+    margin: 40px auto;
+
+}
+
+.galeria h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:rgb(102, 117, 127)
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.contenedor-galeria img:hover {
+    transform: scale(1.05);
+}
+/*lightbox*/
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img{
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*Ubicasion*/
+.ubicacion {
+    display: flex;
+    padding: 20px 0  20px;
+    gap: 20x;
+}
+
+.mapa {
+    flex: 2;
+    margin: 20px;
+
+}
+
+.descripcion {
+    margin: 20px;
+    flex: 1;
+}
+
+.descripcion h2{
+    color: #fff;
+}
+
+/* redes sociales */
+.info-txt {
+    color: #ffff;
+    text-shadow: 0 0 10px rgb(0, 255, 200),
+                 0 0 20px rgb(69, 255, 255);
+}
+
+hr {
+    margin: 45px 0;
+    border: 0.5px solid #aab1ff;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.enlaces h3 {
+    font-size: 25px;
+    text-shadow: 0 0 10px rgb(162, 0, 255),
+                 0 0 20px rgb(162, 0, 255),
+                 0 0 40px rgb(162, 0, 255),
+                 0 0 80px rgb(162, 0, 255),
+                 0 0 160px rgb(162, 0, 255);
+}
+
+.enlace {
+    display: flex;
+    
+}
+
+.enlace li a {
+    display: block;
+    margin: 20px;
+    color: #fff;
+}
+
+.enlace li a:hover {
+    transition: all 0.5s ease;
+    color: #00ffc8;
+    text-shadow: 0 0 10px rgb(69, 255, 255),
+                 0 0 20px rgb(69, 255, 255),
+                 0 0 40px rgb(69, 255, 255);
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    gap: 20px;
+    
+}
+
+.footer_link {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+.footer_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.footer_link:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.facebook:hover {
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border: none;
+    background: linear-gradient(120deg, rgb(59, 89, 152),rgb(255, 255, 255));
+    box-shadow: 0 0 10px rgb(59, 89, 152),
+                0 0 20px rgb(59, 89, 152),
+                0 0 40px rgb(59, 89, 152);
+}
+
+.whatsapp:hover {
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border: none;
+    background: linear-gradient(45deg, rgb(229, 255, 204), rgb(30, 190, 165),rgb(0, 230, 118), rgb(208, 233, 234),rgb(237, 248, 245),rgb(255, 255, 255));
+    box-shadow: 0 0 10px rgb(0, 230, 118),
+                0 0 20px rgb(0,230 ,118),
+                0 0 40px rgb(0, 230 ,118);
+}
+
+.instagram:hover {
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border: none;
+   background: linear-gradient(45deg, rgb(245,133,41),rgb(254, 218, 119), rgb(221, 42, 123), rgb(129, 52, 175), rgb(81,91,212));
+   box-shadow: 0 0 10px rgb(221, 42, 123),
+               0 0 20px rgb(221, 42, 123),
+               0 0 40px rgb(221, 42, 123);
+}
+
+.twitter:hover {
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    border: none;
+    background: linear-gradient(45deg,rgb(102, 117, 127),rgb(0, 172, 238),rgb(54, 216, 255),rgb(245, 248, 250),rgb(255, 255, 255));
+    box-shadow: 0 0 10px rgb(0, 172, 238),
+                0 0 20px rgb(0, 172, 238),
+                0 0 40px rgb(0, 172, 238);
+}
+
+@media (max-width:991px) {
+   .menu {
+        padding: 20px;
+   } 
+
+   .menu label {
+        display: initial;
+   }
+
+   .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #5b50bc;
+        display: none;
+   }
+
+   .menu .navbar ul li {
+        width: 100%;
+   }
+
+   #menu:checked ~ .navbar {
+        display: inline;
+   }
+
+    header {
+        height: 0vh;
+        padding: 400px 0;
+        background-position: center center;   
+    }
+
+   .header-content{
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       padding: 0 30px;
+   }
+
+   .content {
+       padding: 0;
+   }
+
+   .content h1 {
+       margin-top: 100px;
+       font-size: 45px;
+   }
+
+   .content p {
+       margin-top: 0;
+   }
+
+   .header-content img {
+       width: 150px;
+   }
+
+   .services {
+        flex-direction: column;
+        padding: 30px 30px 0 30px;
+   }
+
+   .service {
+        margin-bottom: 50px;
+   }
+
+   .portafolio {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+   }
+
+   .porfolios {
+        padding: 0 30px 30px 30px;
+   }
+
+   .porfolios h2 {
+        margin-bottom: 30px;
+   }
+
+   .porfolio {
+        flex-direction: column;
+   }
+
+   .porfolio img {
+    display: none;
+   }
+
+   .porfolio-1 {
+        text-align: center;
+        margin: 0 0 25px 0;
+   }
+
+   .porfolio-2 {
+      text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+    .footer {
+        padding: 0 30px 30px 30px;
+    }
+
+    .info-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-price {
+        margin: 0 0 20px 0;
+    }
+    .footer_social {
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    hr {
+        margin: 25px 0;
+    }
+
+    .enlaces {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlace {
+        flex-direction: column;
+    }
+}
